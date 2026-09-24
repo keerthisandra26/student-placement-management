@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlacementPro — Campus Placement Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div id="toast-container"></div>
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">P</div>
+      <div><strong>PlacementPro</strong><span>Campus Intelligence</span></div>
+    </div>
+
+    <div class="workspace">
+      <span class="eyebrow">WORKSPACE</span>
+      <button class="workspace-btn" id="workspaceBtn"><span>2026 Placement Drive</span><span>⌄</span></button>
+    </div>
+
+    <nav>
+      <button class="nav-item active" data-page="dashboard"><span>⌂</span> Overview</button>
+      <button class="nav-item" data-page="students"><span>◉</span> Students</button>
+      <button class="nav-item" data-page="companies"><span>▣</span> Recruiters</button>
+      <button class="nav-item" data-page="applications"><span>↗</span> Applications</button>
+      <button class="nav-item" data-page="eligibility"><span>✓</span> Eligibility</button>
+      <button class="nav-item" data-page="skills"><span>✦</span> Skills</button>
+      <button class="nav-item" data-page="interviews"><span>◷</span> Interviews</button>
+      <button class="nav-item" data-page="offers"><span>★</span> Offers</button>
+      <button class="nav-item" data-page="analytics"><span>◒</span> Analytics</button>
+      <button class="nav-item" data-page="activity"><span>◔</span> Activity</button>
+    </nav>
+
+    <div class="sidebar-bottom">
+      <div class="system-card"><span class="pulse"></span><div><b>System Online</b><small>All services operational</small></div></div>
+      <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+      <div class="user-mini"><div class="avatar">KS</div><div><b>Placement Admin</b><small>Administrator</small></div></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="mobile-brand"><button class="icon-btn menu-btn" id="menuBtn" title="Menu" aria-label="Open menu">☰</button><div class="brand-mark">P</div><strong>PlacementPro</strong></div>
+      <div class="search-wrap"><span>⌕</span><input id="globalSearch" placeholder="Search students, companies, applications..."><kbd>Ctrl K</kbd></div>
+      <div class="top-actions">
+        <button class="icon-btn" id="themeBtn" title="Toggle theme">☼</button>
+        <button class="icon-btn notification-btn" id="notificationBtn" title="Notifications">♢<i id="notifDot"></i></button>
+        <div class="avatar">KS</div>
+      </div>
+    </header>
+
+    <section id="app" class="content"></section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-backdrop"></div>
+    <div class="modal-card" id="modalCard"></div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
