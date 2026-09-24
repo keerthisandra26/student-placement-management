@@ -1,54 +1,87 @@
-# PlacementPro — Campus Placement Intelligence Platform
+PlacementPro — Campus Placement Intelligence Platform
 
-A polished full-stack campus placement management application built with **HTML, CSS, JavaScript, Flask and SQLite**.
+Live Demo
+https://student-placement-management-lz2l.onrender.com/
 
-## Final features
-- Premium responsive dashboard with placement KPIs and live pipeline
-- Student profiles with academics, skills and placement status
-- Recruiter/company management
-- Placement applications and status workflow
-- Eligibility center
-- Skill intelligence page
-- Interview scheduling and tracking
-- Offers and placement outcomes
-- Analytics and report export
-- Placement insights and activity/audit timeline
-- Global search (`Ctrl + K`)
-- Dark/light mode
-- Modal forms, validation, toast feedback and animations
-- Demo dataset for immediate presentation
-- REST API + SQLite persistence
+---
+About the Project
 
-## Run locally
-```bash
-cd backend
-pip install -r requirements.txt
-python app.py
-```
-Open `http://127.0.0.1:5000`
+PlacementPro is a full-stack **campus placement management system** that helps colleges manage students, recruiters, applications, interviews, offers, and placement analytics in one centralized platform.
+It provides a dashboard to track the complete placement process from student applications to final placement outcomes.
 
-## Architecture
-Browser UI → Flask REST API → SQLite database
+---
 
-## Project structure
+## Features
+
+- **Students** — Manage student details, CGPA, branch, skills, and placement status.
+- **Recruiters** — Manage companies, job roles, packages, locations, and requirements.
+- **Applications** — Track applications through Applied, Shortlisted, Interview, Selected, or Rejected stages.
+- **Eligibility** — Check students against placement criteria.
+- **Skills** — Analyze technical skills available among students.
+- **Interviews** — Schedule and track interview rounds, dates, modes, and status.
+- **Offers** — Record company offers, roles, packages, joining dates, and outcomes.
+- **Analytics** — View placement percentage, application funnel, recruiter activity, and placement insights.
+- **Other** — Global search, dark/light mode, activity tracking, quick actions, and CSV export.
+
+---
+
+## Technologies Used
+
+| Technology |Used For |
+
+| **HTML5** | Structure of the application |
+| **CSS3** | UI design, layout, and themes |
+| **JavaScript** | Frontend interactions and API communication |
+| **Python** | Backend application logic |
+| **Flask** | REST API and server |
+| **SQLite** | Database and data storage |
+| **Gunicorn** | Production server |
+| **Render** | Cloud deployment |
+| **GitHub** | Source code and version control |
+
+---
+
+## Application Flow
+
 ```text
-PlacementPro_Final/
+Frontend
+HTML + CSS + JavaScript
+        ↓
+Flask REST API
+        ↓
+SQLite Database
+----
+
+##Run Locally
+1. Download the project
+
+Click Code → Download ZIP from the GitHub repository, then extract the ZIP file.
+
+Or clone it using:
+git clone https://github.com/keerthisandra26/student-placement-management.git
+2. Open the project folder
+cd student-placement-management
+3. Install dependencies
+pip install -r backend/requirements.txt
+4. Run the application
+python backend/app.py
+5. Open in browser
+
+Go to:
+http://127.0.0.1:5000
+
+📂 Project Structure
+student-placement-management/
+│
 ├── backend/
 │   ├── app.py
 │   └── requirements.txt
+│
 ├── frontend/
 │   ├── index.html
 │   ├── script.js
 │   └── style.css
+│
+├── render.yaml
 ├── README.md
 └── .gitignore
-```
-
-## Presentation note
-The included database is intentionally not committed. A fresh database is initialized with realistic demo data the first time the backend starts.
-
-
-## Render deployment
-- Build command: `pip install -r backend/requirements.txt`
-- Start command: `gunicorn --chdir backend --bind 0.0.0.0:$PORT app:app`
-- The app uses SQLite for this demo. On Render Free, local SQLite data is ephemeral and can reset after a restart/redeploy.
